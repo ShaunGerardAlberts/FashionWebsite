@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+    <title>Fairy Style</title>
+  </head>
+  <body>
+    <div id="page">
+      <button class="shop-button">Sale!!!</button>
+
+      <div class="container">
+            <div class="logo">
+
+            </div>
+      </div>
+
+      <!-- ****************  Navigation Section  *************************** -->
+      <nav class="nav navbar-default">
+        <div>
+          <button type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#collapsemenu"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsemenu">
+          <ul class="nav navbar-nav">
+            <li><a href="#">HOME</a></li>
+            <li><a class="dropdown-toggle"
+                data-toggle="dropdown" role="button"
+                aria-haspopup="true"
+                aria-expanded="false">PRODUCTS
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Accessories</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="dropdown-toggle"
+                data-toggle="dropdown" role="button"
+                aria-haspopup="true"
+                aria-expanded="false">ABOUT
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Register</a></li>
+              </ul>
+            </li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACTS</a></li>
+          </ul>
+        </div>
+      </nav> <!-- End nav section -->
+
+      <!-- *********************  Slider Banner  *************************** -->
+      <div class="carousel slide" id="featured">
+
+
+
+        <ol class="carousel-indicators">
+          <li data-target="#featured" data-slide-to="0" class="active"></li>
+          <li data-target="#featured" data-slide-to="1"></li>
+          <li data-target="#featured" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/index-03.jpg" alt="Lifestyle Photo">
+            </div>
+            <div class="item">
+                <img src="images/index-02.jpg" alt="Mission">
+            </div>
+            <div class="item">
+                <img src="images/index-01.jpg" alt="Vaccinations">
+            </div>
+        </div> <!-- carousel-inner -->
+
+        <a class="left carousel-control"
+            href="#featured" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+
+        <a class="right carousel-control"
+          href="#featured" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"><span>
+        </a>
+
+      </div> <!-- End carousel slide  -->
+
+      <!-- ************************ Featured Section   *******************> -->
+      <article class="container">
+        <h2>Featured Items</h2>
+        <div class="row">
+
+          <section class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <img src="images/category-04.jpg" alt="Error Cannot Load"/>
+            <h3>Denim Jeans <span class="price">$34</span></h3>
+          </section>
+
+          <section class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <img src="images/category-07.jpg" alt="Error Cannot Load"/>
+            <h3>White Pants <span class="price">$34</span></h3>
+          </section>
+
+          <section class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <img src="images/category-09.jpg" alt="Error Cannot Load"/>
+            <h3>Handbag <span class="price">$34</span></h3>
+          </section>
+
+          <section class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <img src="images/category-01.jpg" alt="Error Cannot Load"/>
+            <h3>Check Bag <span class="price">$34</span></h3>
+          </section>
+
+          <section class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <img src="images/category-03.jpg" alt="Error Cannot Load"/>
+            <h3>Black Jeans <span class="price">$34</span></h3>
+          </section>
+
+          <section class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <img src="images/category-08.jpg" alt="Error Cannot Load"/>
+            <h3>White Top <span class="price">$34</span></h3>
+          </section>
+
+        </div>
+      </article> <!-- End featured Section -->
+
+      <!-- ************************ Register Section   *******************> -->
+      <article class="registerSection">
+        <div class="container">
+          <div class="registerForm">
+            <h2>Register Today</h2>
+
+            <form action="#" method="GET">
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <a data-toggle="tooltip" data-placement="top" title="Valid Email Please">
+                  <input type="text" id="inputEmail"
+                    class="form-control" placeholder="Email">
+                </a>
+                <h4 class="email-error-response"></h4>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <a data-toggle="tooltip" data-placement="top" title="1 uppercase chracter | 1 lowercase chracter |
+                  1 digit value | at least 8 charaters long">
+                  <input type="password" id="inputPassword"
+                    class="form-control" placeholder="Password">
+                </a>
+                <h4 class="password-error-response"></h4>
+              </div>
+              <div class="form-group">
+                <input id="register-button" class="btn btn-default pull-left" type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- ************************ Footer Section   *******************> -->
+      <footer>
+        <div class="container">
+          <img src="images/logo-light.png" alt="Error loading image">
+          <p>
+            With the company's history dating 10 years back, we always felt
+            desire to tell some kind of complete story with our clothes. So the
+            original style mixed with an calming feel of a modern day makes us
+            what we actually are.
+          </p>
+          <p class="footer-end">Fary Style 2017 | <span>Privacy Policy</span></p>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Add the bootstrap JavaScript files needed for the dropdown -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
