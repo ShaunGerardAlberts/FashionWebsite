@@ -61,6 +61,7 @@ h3 {
   padding: 5px;
 }
 
+/******************************************************************/
 /********************  featured Items Section *********************/
 article.container h2 {
   padding: 30px 0 30px 0;
@@ -77,6 +78,27 @@ article.container section .price {
   width:80%;
   margin-left: 10%;
 }
+
+/*  Styling for the lightbox | manulpated code from : https://codepen.io/webcane/pen/bNEOXZ */
+#profile-grid { overflow: auto; white-space: normal; }
+#profile-grid .profile { padding-bottom: 0px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 0px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:0px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+
+/* on mobile they size of the image and modal-content must be made smaller */
+.modal-content {
+    width: 300px;
+    margin: 0 auto;
+}
+.lightbox-image {
+  width: 270px;
+}
+/* end of styling for lightbox*/
+
 /*.container {
   background-color: red;
 }*/
@@ -171,6 +193,14 @@ footer p:last-child span {
   top: 359px;
   left: 69%;
   font-size: 1.2em;
+}
+/* on larger screen size of the image and modal-content can be made larger */
+.modal-content {
+    width: 430px;
+    margin: 0 auto;
+}
+.lightbox-image {
+  width: 400px;
 }
   footer p {
     width: 500px;
