@@ -20,6 +20,33 @@ $(function() {
     });
   }
 
+  /* The sales button needs to be moved down when the collapsed navigation is expanded */
+  var smallMobile = 320;
+  var mediumMobile = 375;
+  var smallTablet = 425;
+  // everytime the button is clicked see if it's collapsed or not, then move the button accordingly
+  $("button.navbar-toggle").click(function(event) {
+    if ($('#collapsemenu').hasClass('in')) {
+      // the nav is collapsed so move the sales button up
+      if (windowWidth <= smallMobile) {// target different platforms
+        $('.shop-button').animate({top: '212px'});
+      } else if (windowWidth <= mediumMobile) {
+        $('.shop-button').animate({top: '230px' });
+      } else if (windowWidth <= smallTablet) {
+        $('.shop-button').animate({top: '250px' });
+      }
+    } else {
+      // the nav is not collapsed, so move the button down
+      if (windowWidth <= smallMobile) {//, target different platforms
+        $('.shop-button').animate({top: '380px' });
+      } else if (windowWidth <= mediumMobile) {
+        $('.shop-button').animate({top: '400px' });
+      } else if (windowWidth <= smallTablet) {
+        $('.shop-button').animate({top: '410px' });
+      }
+    }
+  });
+
   //  *******   Slider wait 5 seconds before changing slide  ****************
   $('.carousel').carousel({
     interval: 5000,
@@ -34,7 +61,7 @@ $(function() {
     	var content = $('.modal-body');
     	content.empty();
       var title = $(this).attr("title");
-      $('.modal-title').html(title);      	
+      $('.modal-title').html(title);
       content.html($(this).html());
       $(".modal-profile").modal({show:true});
     });
