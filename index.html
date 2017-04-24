@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/myStyle.css">
     <title>Fairy Style</title>
@@ -36,7 +35,17 @@
         </div>
         <div class="collapse navbar-collapse" id="collapsemenu">
           <ul class="nav navbar-nav">
-            <li><a href="#">HOME</a></li>
+            <li><a class="dropdown-toggle"
+                data-toggle="dropdown" role="button"
+                aria-haspopup="true"
+                aria-expanded="false">Page
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#featured-items-bookmark">Feautured Items</a></li>
+                <li><a href="#register-section-bookmark">Register</a></li>
+              </ul>
+            </li>
             <li><a class="dropdown-toggle"
                 data-toggle="dropdown" role="button"
                 aria-haspopup="true"
@@ -102,7 +111,7 @@
       </div> <!-- End carousel slide  -->
 
       <!-- ************************ Featured Section   *******************> -->
-      <article class="container">
+      <article class="container" id="featured-items-bookmark">
         <h2>Featured Items</h2>
         <div class="row">
 
@@ -182,7 +191,7 @@
       </article> <!-- End featured Section -->
 
       <!-- ************************ Register Section   *******************> -->
-      <article class="registerSection">
+      <article class="registerSection" id="register-section-bookmark">
         <div class="container">
           <div class="registerForm">
             <h2>Register Today</h2>
@@ -194,16 +203,16 @@
                   <input type="text" id="inputEmail"
                     class="form-control" placeholder="Email">
                 </a>
-                <h4 class="email-error-response"></h4>
+                <h6 class="email-error-response"></h6>
               </div>
               <div class="form-group">
                 <label for="inputPassword">Password</label>
-                <a data-toggle="tooltip" data-placement="top" title="1 uppercase chracter | 1 lowercase chracter |
+                <a data-toggle="tooltip" data-placement="top" title="1 uppercase character | 1 lowercase character |
                   1 digit value | at least 8 charaters long">
                   <input type="password" id="inputPassword"
                     class="form-control" placeholder="Password">
                 </a>
-                <h4 class="password-error-response"></h4>
+                <h6 class="password-error-response"></h6>
               </div>
               <div class="form-group">
                 <input id="register-button" class="btn btn-default pull-left" type="submit" value="Submit">
@@ -223,13 +232,13 @@
             original style mixed with an calming feel of a modern day makes us
             what we actually are.
           </p>
-          <p class="footer-end">Fary Style 2017 | <span>Privacy Policy</span></p>
+          <p class="footer-end">Fairy Style 2017 | <span>Privacy Policy</span></p>
         </div>
       </footer>
 
     </div>
 
-    <!-- Add the bootstrap JavaScript files needed for the dropdown -->
+    <!-- Add the bootstrap JavaScript files needed -->
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

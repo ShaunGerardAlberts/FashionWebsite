@@ -16,20 +16,16 @@ h2 {
 h3 {
   text-align: center;
 }
+
 /*************   Navigation Section *****************************/
 .navbar-default {
-  /*background-color: #fff;
-  position: fixed;
-  top: 30px;
-  left: 5%;
   background-color: #fff;
-  width: 160px;*/
 }
 /* when scrolling past a certain point nav bar get fixed */
 .navbar-fixed-top {
     background-color:  #f2f2f2;
-    /*color: white;*/
 }
+
 /*******************  Logo Section ********************************/
 .logo {
   background-image: url("../images/logo.png");
@@ -49,11 +45,13 @@ h3 {
 .carousel-indicators .active {
   background-color: #444 !important;
 }
+/* this button is going to be repositioned depending on platform, so over again in media queries */
 .shop-button {
   position: relative;
   top: 212px;
   left: 69%;
   background-color: #cc1414;
+  border-radius: 15px;
   color: #fff;
   z-index: 1;
   font-size: 0.9em;
@@ -72,13 +70,15 @@ article.container h3 {
   padding-bottom: 15px;
 }
 article.container section .price {
-  color: red;
+  color: #cc1414;
 }
 .container .row section img {
   width:80%;
   margin-left: 10%;
 }
-
+#featured-items-bookmark {
+    padding-bottom: 50px;
+}
 /*  Styling for the lightbox | manulpated code from : https://codepen.io/webcane/pen/bNEOXZ */
 #profile-grid { overflow: auto; white-space: normal; }
 #profile-grid .profile { padding-bottom: 0px; }
@@ -99,20 +99,16 @@ article.container section .price {
 }
 /* end of styling for lightbox*/
 
-/*.container {
-  background-color: red;
-}*/
-
 /********************  Register Section  ****************************/
 .registerSection {
   background-image: url("../images/index-16.jpg");
-  background-position: center center;
+  background-position: left center;
   background-size: cover;
-  height: 800px;
+  height: 500px;
   padding-top: 40px;
 }
 .registerForm {
-  padding-top: 130px;
+  padding-top: 30px;
   width: 280px;
   margin: 0 auto;
 }
@@ -121,10 +117,13 @@ article.container section .price {
 }
 .email-error-response {
   color: #cc1414;
+  font-style: italic;
 }
 .password-error-response {
   color: #cc1414;
+  font-style: italic;
 }
+
 /*******************  Footer Section  *****************************/
 footer {
   background-color: black;
@@ -140,35 +139,28 @@ footer img {
 }
 footer p {
   position: relative;
-/*  width: 500px;*/
   top: 120px;
   margin: 0 auto;
-  /*padding-top: 100px;*/
   color: #fff;
 }
 footer p:last-child {
-  width: 200px;
+  width: 220px;
   padding-top: 60px;
   color: #fff;
 }
 footer p:last-child span {
     color: #cc1414;
 }
+
 /************************* Media Queries  *******************************/
 /*  media queries, bootstrap is mobile first, so global styling set for mobile. Overrite them moving outwards(wider)   */
-
 @media(min-width: 320px) {
-  /*.container {
-    background-color: black;
-  }*/
+
 }
 @media(min-width: 375px) {
 
 }
 @media(min-width: 425px) {
-  footer p {
-    color: lightgreen;
-  }
   .shop-button {
     top: 241px;
     left: 72%;
@@ -189,6 +181,9 @@ footer p:last-child span {
 .navbar-default .container {
   padding: 0;
 }
+.nav {
+  width: 520px;
+}
 .shop-button { /**  banner section **/
   top: 359px;
   left: 69%;
@@ -204,7 +199,6 @@ footer p:last-child span {
 }
   footer p {
     width: 500px;
-    color: lightblue;
   }
   /*.container {
     background-color: blue;
@@ -225,9 +219,14 @@ footer p:last-child span {
     top: 444px;
     left: 79%;
 }
+.registerSection {
+  height: 600px;
+}
+.registerForm {
+  padding-top: 60px;
+}
   footer p {
     width: 600px;
-    color: yellow;
   }
   /*.container {
     background-color: white;
@@ -236,17 +235,20 @@ footer p:last-child span {
 @media(min-width: 1200px) {
   footer p {
     width: 700px;
-    color: pink;
   }
-  /*
-  .container {
-    background-color: green;
-  }*/
 }
 @media(min-width: 1440px) {
+  article.container h2 { /*  when the nav is fixed, need more spacing to not cover heading */
+    padding-top: 60px;
+  }
+  .registerSection {
+    height: 800px;
+  }
+  .registerForm {
+    padding-top: 100px;
+  }
   footer p {
     width: 800px;
-    color: lightgreen;
   }
   .navbar-default {
     left: 45%;
@@ -256,11 +258,11 @@ footer p:last-child span {
     left: 74%;
     font-size: 1.8em;
   }
-  /*.container {
-    background-color: yellow;
-  }*/
 }
 @media(min-width: 1800px) {
+  article.container h2 { /*  when the nav is fixed, need more spacing to not cover heading */
+    padding-top: 90px;
+  }
   .shop-button {
     top: 700px;
     left: 78%;

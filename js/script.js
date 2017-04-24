@@ -1,7 +1,7 @@
 $(function() {
 
   // ****************   Move menu to top-fixed if scrolled down  ***************/
-  //apply a fixed menu bar for the desktop layout, if not desktop dont apply
+  // apply a fixed menu bar for the desktop layout, if not desktop dont apply
   var topPosition = 0;
   var whenToChange = 100;
   var desktopSize = 768;
@@ -20,10 +20,11 @@ $(function() {
     });
   }
 
-  /* The sales button needs to be moved down when the collapsed navigation is expanded */
+  /**** The sales button needs to be moved down when the collapsed navigation is expanded */
   var smallMobile = 320;
   var mediumMobile = 375;
   var smallTablet = 425;
+  var largeTable = 768;
   // everytime the button is clicked see if it's collapsed or not, then move the button accordingly
   $("button.navbar-toggle").click(function(event) {
     if ($('#collapsemenu').hasClass('in')) {
@@ -34,6 +35,8 @@ $(function() {
         $('.shop-button').animate({top: '230px' });
       } else if (windowWidth <= smallTablet) {
         $('.shop-button').animate({top: '250px' });
+      } else if (windowWidth < largeTable) {
+        $('.shop-button').animate({top: '270px' });
       }
     } else {
       // the nav is not collapsed, so move the button down
@@ -43,8 +46,16 @@ $(function() {
         $('.shop-button').animate({top: '400px' });
       } else if (windowWidth <= smallTablet) {
         $('.shop-button').animate({top: '410px' });
+      } else if (windowWidth < largeTable) {
+        $('.shop-button').animate({top: '420px' });
       }
     }
+  });
+
+  // A sales button gets positioned depending on platform, but when resizing manually
+  // obvisouly wont refresh page automatiacally thus when resizing browser with command
+  $(window).resize(function() {
+    location.reload();
   });
 
   //  *******   Slider wait 5 seconds before changing slide  ****************
@@ -81,7 +92,7 @@ $(function() {
 
   });
 
-
+//*****************************************************************************
 // *****************************    Helper Functions   ************************
 
   // Depending on email and password validity, allow or stop submit
