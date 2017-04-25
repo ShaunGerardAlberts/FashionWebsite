@@ -53,7 +53,7 @@ $(function() {
   });
 
   // A sales button gets positioned depending on platform, but when resizing manually
-  // obvisouly wont refresh page automatiacally thus when resizing browser with command
+  // obviously wont refresh page automatically thus force refresh when resizing browser
   $(window).resize(function() {
     location.reload();
   });
@@ -122,7 +122,7 @@ $(function() {
   function validateEmail(email) {
     if (email.length == 0) {
       $("form div:first").addClass("has-error");
-      $('.email-error-response').text('Email is blank');
+      $('.email-error-response').text('** Email is blank');
       return false;
     } else { // not blank
       // copied this regex from : http://www.jquerybyexample.net/2011/04/validate-email-address-using-jquery.html
@@ -135,7 +135,7 @@ $(function() {
       else {
         // Not valid email, inform user
         $("form div:first").addClass("has-error");
-        $('.email-error-response').text('Invalid email entry');
+        $('.email-error-response').text('** Invalid email entry');
         return false;
       }
     }
@@ -146,7 +146,7 @@ $(function() {
   function validatePassword(password) {
     if (password.length == 0) {
       $("form div:nth-child(2)").addClass("has-error");
-      $('.password-error-response').text('Password is blank');
+      $('.password-error-response').text('** Password is blank');
       return false;
     } else {
       // password must contain at least 1 lowercase, uppercase, digit, and at least 8 charaters
@@ -158,7 +158,7 @@ $(function() {
       } else {
         // Not a valid password, inform user
         $("form div:nth-child(2)").addClass("has-error");
-        $('.password-error-response').text('Invalid password entry');
+        $('.password-error-response').text('** Invalid password entry');
         return false;
       }
     }
