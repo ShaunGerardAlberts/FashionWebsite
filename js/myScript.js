@@ -52,9 +52,13 @@ $(function() {
   });
 
   // A sales button gets positioned depending on platform, but when resizing manually
-  // obviously wont refresh page automatically thus force refresh when resizing browser
+  // obviously wont refresh page automatically thus force refresh when resizing browser width
+  var currentWidth = $('window').width();
   $(window).resize(function() {
-    location.reload();
+    // Dont resize if only the height changes or causes issues for mobile devices
+    if ($(this).width() != currentWidth) {
+       location.reload();
+    }
   });
 
   //  *******   Slider wait 5 seconds before changing slide  ****************
@@ -96,7 +100,7 @@ $(function() {
 
   // Depending on email and password validity, allow or stop submit
   function validateSubmit(email, password) {
-    
+
     // Validate the email value.  If blank warn, then if invalid warn
     var isEmailValid = validateEmail(email);
 
