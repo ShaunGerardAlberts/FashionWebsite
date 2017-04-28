@@ -5,7 +5,6 @@ $(function() {
   var topPosition = 0;
   var whenToChange = 100;
   var desktopSize = 768;
-  // var scrollTimeout = false;
   var windowWidth = $(window).width();
   // When width indicates this device is a dektop, add scroll listener
   if (windowWidth >= desktopSize) {
@@ -30,7 +29,7 @@ $(function() {
     if ($('#collapsemenu').hasClass('in')) {
       // the nav is collapsed so move the sales button up
       if (windowWidth <= smallMobile) {// target different platforms
-        $('.shop-button').animate({top: '212px'});
+        $('.shop-button').animate({top: '212px' });
       } else if (windowWidth <= mediumMobile) {
         $('.shop-button').animate({top: '230px' });
       } else if (windowWidth <= smallTablet) {
@@ -97,7 +96,7 @@ $(function() {
 
   // Depending on email and password validity, allow or stop submit
   function validateSubmit(email, password) {
-
+    
     // Validate the email value.  If blank warn, then if invalid warn
     var isEmailValid = validateEmail(email);
 
@@ -114,7 +113,6 @@ $(function() {
       $("form div:nth-child(2)").removeClass("has-error");
       alert("Submit Successful");
     }
-
   }
 
   // This will check if the email is blank, invalid or valid

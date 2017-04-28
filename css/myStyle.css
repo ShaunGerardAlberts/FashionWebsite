@@ -163,42 +163,42 @@ footer p:last-child span {
   }
 }
 @media(min-width: 768px) {
-/*  Here the navigation needs to change, it becomes uncollapsed but under logo  */
-.navbar-default {
-  position: relative;
-  width: 500px;
-  top: -75px;
-  left: 40%;
-  background-color: #fff;
-  color: #000;
-  font-weight: bold;
-  border-color: #e7e7e7;
-}
-.navbar-default .container {
-  padding: 0;
-}
-.nav {
-  width: 520px;
-}
-.shop-button { /**  banner section **/
-  top: 359px;
-  left: 69%;
-  font-size: 1.2em;
-}
-/* on larger screen size of the image and modal-content can be made larger */
-.modal-content {
-    width: 430px;
-    margin: 0 auto;
-}
-.lightbox-image {
-  width: 400px;
-}
+  /*  Here the navigation needs to change, it becomes uncollapsed but under logo  */
+  .navbar-default {
+    position: relative;
+    width: 500px;
+    top: -75px;
+    left: 40%;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-color: #e7e7e7;
+  }
+  .navbar-default .container {
+    padding: 0;
+  }
+  .nav {
+    width: 520px;
+  }
+  .shop-button { /**  banner section **/
+    top: 359px;
+    left: 69%;
+    font-size: 1.2em;
+  }
+  /* on larger screen size of the image and modal-content can be made larger */
+  .modal-content {
+      width: 430px;
+      margin: 0 auto;
+  }
+  .lightbox-image {
+    width: 400px;
+  }
   footer p {
     width: 500px;
   }
 }
 @media(min-width: 1024px) {
-/*  Here the navigation needs to change, it moved outwards next to the logo  */
+  /*  Here the navigation needs to change, it moved outwards next to the logo  */
   .navbar-default {
     position: relative;
     width: 500px;
@@ -211,13 +211,13 @@ footer p:last-child span {
   .shop-button {
     top: 444px;
     left: 79%;
-}
-.registerSection {
-  height: 600px;
-}
-.registerForm {
-  padding-top: 60px;
-}
+  }
+  .registerSection {
+    height: 600px;
+  }
+  .registerForm {
+    padding-top: 60px;
+  }
   footer p {
     width: 600px;
   }
